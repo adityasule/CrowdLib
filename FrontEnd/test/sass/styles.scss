@@ -67,6 +67,17 @@ input[type=text]:focus {
     border: 1px solid #000;
 }
 
+input[type=range] {
+    -webkit-appearance: none;
+    wdith: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+
+
 meter {
     width: 260px;
     height: 20px;
@@ -87,6 +98,12 @@ a {
     color: #808080;
     &:hover {
         color: #000000;
+        text-decoration: none; 
+    }
+    &:visited {
+        text-decoration: none; 
+    }
+    &:active {
         text-decoration: none; 
     }
 }
