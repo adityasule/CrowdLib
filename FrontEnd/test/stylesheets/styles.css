@@ -188,8 +188,8 @@ a:active {
 /* line 120, ../sass/styles.scss */
 .search .search_message {
   font-size: 20px;
-  width: 15%;
-  text-align: left;
+  width: 50%;
+  text-align: center;
   margin: 0 auto;
   display: block;
   padding: 1rem 1rem 0.5rem 1rem;
