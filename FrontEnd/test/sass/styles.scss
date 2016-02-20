@@ -19,7 +19,6 @@
     position: absolute;
     top: 20px;
     right: 30px;
-    outline: 2px groove black;
 }
 
 
@@ -45,8 +44,8 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.login_message {width:100%;}
-.password_message {width:100%;}
+.login_message {width:100%; height: 30px;}
+.password_message {width:100%; height: 30px;}
 
 body {
     font-family: "Josefin Slab", sans-serif; 
@@ -215,8 +214,8 @@ a {
 
 .search .search_message {
     font-size: 20px;
-    width: 15%;
-    text-align: left;
+    width: 50%;
+    text-align: center;
     margin: 0 auto;
     display: block;
     padding: 1rem 1rem 0.5rem 1rem; 
@@ -242,13 +241,12 @@ a {
     color: #000;
     display: block;
     font-size: 20px; 
-    margin: 2rem auto;
+    margin: 1rem auto;
     transition: background-color 0.5s;
     &:hover {
         background: #000;
         color: #fff; 
     }
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 
