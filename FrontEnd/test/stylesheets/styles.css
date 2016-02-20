@@ -18,135 +18,137 @@
   right: 30px;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 25, ../sass/styles.scss */
 * {
   box-sizing: border-box;
   font-family: "Josefin Slab", sans-serif;
 }
 
-/* line 31, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 [class*="col-"] {
   float: left;
   padding: 15px;
 }
 
-/* line 35, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 .col-1 {
   width: 8.33%;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 35, ../sass/styles.scss */
 .col-2 {
   width: 16.66%;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 .col-3 {
   width: 25%;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 .col-4 {
   width: 33.33%;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
 .col-5 {
   width: 41.66%;
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 .col-6 {
   width: 50%;
 }
 
-/* line 41, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .col-7 {
   width: 58.33%;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 .col-8 {
   width: 66.66%;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 .col-9 {
   width: 75%;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 .col-10 {
   width: 83.33%;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 44, ../sass/styles.scss */
 .col-11 {
   width: 91.66%;
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 .col-12 {
   width: 100%;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .login_message {
   width: 100%;
+  height: 30px;
 }
 
-/* line 49, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .password_message {
   width: 100%;
+  height: 30px;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 body {
   font-family: "Josefin Slab", sans-serif;
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 h1 {
   font-size: 100px;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 h2 {
   font-size: 60px;
 }
 
-/* line 65, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 h4 {
   font-size: 30px;
   text-align: right;
 }
 
-/* line 70, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 input[type=text] {
   border: 1px solid #333;
   outline: none;
   transition: 0.5s;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 input[type=text]:focus {
   border: 1px solid #000;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 input[type=range] {
   -webkit-appearance: none;
   wdith: 100%;
 }
 
-/* line 85, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-/* line 91, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 meter {
   width: 260px;
   height: 20px;
@@ -154,36 +156,36 @@ meter {
   margin: 11px 0px 11px 80px;
 }
 
-/* line 98, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 meter::-webkit-meter-bar {
   background: none;
   background-color: whiteSmoke;
 }
 
-/* line 103, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 meter::-webkit-meter-optimum-value {
   background: #ccc;
 }
 
-/* line 107, ../sass/styles.scss */
+/* line 106, ../sass/styles.scss */
 a {
   color: #808080;
 }
-/* line 109, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 a:hover {
   color: #000000;
   text-decoration: none;
 }
-/* line 113, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 a:visited {
   text-decoration: none;
 }
-/* line 116, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 a:active {
   text-decoration: none;
 }
 
-/* line 121, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 .search .search_message {
   font-size: 20px;
   width: 15%;
@@ -193,7 +195,7 @@ a:active {
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
-/* line 130, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 .search .search_submit {
   background: #fff;
   border: 1px solid #000;
@@ -203,50 +205,49 @@ a:active {
   margin: 2rem auto;
   transition: background-color 0.5s;
 }
-/* line 138, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 .search .search_submit:hover {
   background: #000;
   color: #fff;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 .login .login_submit {
   background: #fff;
   border: 2px solid #000;
   color: #000;
   display: block;
   font-size: 20px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   transition: background-color 0.5s;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 152, ../sass/styles.scss */
+/* line 151, ../sass/styles.scss */
 .login .login_submit:hover {
   background: #000;
   color: #fff;
 }
 
-/* line 160, ../sass/styles.scss */
+/* line 158, ../sass/styles.scss */
 .find {
   font-size: 30px;
   margin: 10px 0px 10px 130px;
   text-align: center;
 }
 
-/* line 166, ../sass/styles.scss */
+/* line 164, ../sass/styles.scss */
 .check_in {
   font-size: 30px;
   margin: 50px 0px 0px 10px;
   text-align: center;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 170, ../sass/styles.scss */
 .map {
   margin: 0px 0px 0px 0px;
   padding-right: 0px;
 }
 
-/* line 177, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 .actionlist {
   text-align: left;
   margin: 50px 0px 10px 0px;
