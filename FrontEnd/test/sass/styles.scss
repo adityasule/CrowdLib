@@ -15,6 +15,13 @@
 
 }
 
+#login{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    outline: 2px groove black;
+}
+
 
 *{
     box-sizing: border-box; 
@@ -37,6 +44,9 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+.login_message {width:100%;}
+.password_message {width:100%;}
 
 body {
     font-family: "Josefin Slab", sans-serif; 
@@ -223,9 +233,24 @@ a {
     &:hover {
         background: #000;
         color: #fff; 
-    } 
- 
+    }  
 }
+
+.login .login_submit {
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        background: #000;
+        color: #fff; 
+    }
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 .find {
     font-size: 30px; 
