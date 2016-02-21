@@ -742,12 +742,12 @@ input[type=range] {
   /*fix for FF unable to apply focus style bug */
   border: 1px solid white;
   /*required for proper track sizing in FF*/
-  width: 600px;
+  width: 80%;
 }
 
 /* line 88, ../sass/styles.scss */
 input[type=range]::-webkit-slider-runnable-track {
-  width: 600px;
+  width: 80%;
   height: 5px;
   background: #ddd;
   border: none;
@@ -761,7 +761,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: goldenrod;
+  background: #0066CC;
   margin-top: -4px;
 }
 
@@ -777,7 +777,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 /* line 111, ../sass/styles.scss */
 input[type=range]::-moz-range-track {
-  width: 600px;
+  width: 80%;
   height: 5px;
   background: #ddd;
   border: none;
@@ -802,7 +802,7 @@ input[type=range]:-moz-focusring {
 
 /* line 132, ../sass/styles.scss */
 input[type=range]::-ms-track {
-  width: 600px;
+  width: 80%;
   height: 5px;
   /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
   background: transparent;
@@ -932,25 +932,26 @@ a:active {
 
 /* line 241, ../sass/styles.scss */
 .check_in {
-  font-size: 40px;
-  margin: 80px 0px 0px 10px;
+  font-size: 35px;
+  width: 80%;
+  padding-top: 50px;
   text-align: center;
 }
 
-/* line 247, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 .map {
   margin: 0px 0px 0px 0px;
   padding-right: 0px;
 }
 
-/* line 252, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 .actionlist {
   text-align: left;
-  margin: 80px 0px 10px 0px;
-  font-size: 50px;
+  margin: 50px 0px 20px 0px;
+  font-size: 40px;
 }
 
-/* line 258, ../sass/styles.scss */
+/* line 259, ../sass/styles.scss */
 .actionset {
-  padding-left: 200px;
+  padding-left: 100px;
 }
