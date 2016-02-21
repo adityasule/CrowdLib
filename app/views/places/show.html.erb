@@ -3,28 +3,32 @@
 </div>
 <div class="col-1"></div>
 <div class="col-4">
-    <br><br><br>
-    <form action="data.asp" method="get">
-        <h4 class="actionlist"> Crowd </h4> 
-        <input type="range" min="0" max="10">
-    </form> 
-    <form action="data.asp" method="get">
-        <h4 class="actionlist"> Noise </h4> 
-        <input type="range" min="0" max="10">
-    </form> 
-    <form action="data.asp" method="get">
-        <h4 class="actionlist"> Cleanliness </h4> 
-        <input type="range" min="0" max="10">
-    </form>
-    <div class="check_in">
-        <a href="#" class="actions_go"> Check In </a>
-    </div> 
+    <p> Moustachios house is a great way to learn about almost nothing! We don't even get to see stars! </p>
 
-</div> 
+    <br> 
+    <div class="col-4">
+        <h4> Crowd </h4>
+        <h4> Noise </h4>
+        <h4> Clean </h4>
+    </div> 
+    <div class="col-6">
+        <meter value="<%= @place.crowd %>"></meter>
+        <meter value="<%= @place.noise %>"></meter>
+        <meter value="<%= @place.comfort %>"></meter> 
+    </div>
+    <div class="col-2"></div> 
+
+
+
+     
+    <a href="#check_in">
+        <h2 class="message_type"> Want to check in? </h2> 
+    </a>
+</div>
 <div class="col-1"></div> 
 <div class="col-6 map">
    <!-- Set height and width with CSS -->
-            <div id="googleMap" style="height:600px;width:100%;"></div>
+            <div id="googleMap" style="height:450px;width:80%;"></div>
 
             <!-- Add Google Maps -->
                 <script src="http://maps.googleapis.com/maps/api/js"></script>
@@ -51,6 +55,32 @@
         </div>
 
 </div>
+
+<div class="col-12">
+<div class="col-3"></div>
+<div class="col-6">
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Crowd </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Noise </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Cleanliness </h4> 
+        <input type="range" min="0" max="10">
+    </form>
+    <div class="check_in">
+        <a href="#" class="actions_go"> Check In </a>
+    </div> 
+
+</div> 
+<div class="col-3"></div> 
+</div> 
+
+
+
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

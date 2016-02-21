@@ -24,20 +24,22 @@
 <div id="main">
     <% @places.each do |place| %>
         <div class="col-4">
-            <h2> <%= place.name %> </h2>
-                <div class="col-3">
+            <div class="find">
+                <h2> 
+                    <%= link_to place.name, place %>
+                </h2>
+            </div>
+                <div class="col-4">
                     <h4> Crowd </h4>
                     <h4> Noise </h4> 
                     <h4> Clean </h4> 
                 </div>
-                <div class="col-9">
+                <div class="col-6">
                     <meter value="<%= place.crowd %>"></meter>
                     <meter value="<%= place.noise %>"></meter>
                     <meter value="<%= place.comfort %>"></meter> 
                 </div>
-                <div class="find">
-                    <%= link_to 'find', place %>
-                </div> 
+                <div class="col-2"></div> 
         </div>
     <% end %>
 </div>
