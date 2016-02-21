@@ -1,0 +1,510 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "partials/variables";
+@import "partials/normalize";
+#title {
+    padding: 10px;
+    color: #000000;  
+    text-align: center; 
+    padding-top: 50px;
+    font-weight: normal; 
+}
+
+#main {
+    text-align: center;
+
+}
+
+#login{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding-bottom: 80px;
+}
+
+
+*{
+    box-sizing: border-box; 
+    font-family: "Josefin Slab", sans-serif; 
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.login_message {width:100%; height: 30px;}
+.password_message {width:100%; height: 30px;}
+
+body {
+    font-family: "Josefin Slab", sans-serif; 
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit; 
+    margin: .67em 0; 
+}
+
+h2 {
+    padding-left: 50px; 
+    font-size: 40px;
+    font-weight: 500;
+    color: inherit; 
+    line-height: 2em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 27px;
+    text-align: right;
+    font-weight: 500;
+    color: inherit; 
+    line-height: 2em;
+    margin: 0;
+    vertical-align: center;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+
+}
+
+input[type=text] {
+    border: 1px solid #333;
+    outline: none; 
+    transition: 0.5s;
+}
+
+input[type=text]:focus {
+    border: 1px solid #000;
+}
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 80%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #0066CC;
+    margin-top: -10px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 80%;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+meter {
+    width: 100%;
+    height: 20px;
+    border: 1px solid #ccc; 
+    margin: 25px 0px 25px 0px; 
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: whiteSmoke;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #ccc; 
+}
+
+
+a {
+    color: #808080;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #000000;
+    background-color: #ffffff; 
+    text-decoration: none; 
+}
+
+a:visited {
+    text-decoration: none; 
+}
+a:active {
+    text-decoration: none; 
+}
+
+p {
+    font-size: 23px; 
+    line-height: 1.3em;
+}
+
+
+.search .search_message {
+    font-size: 30px;
+    width: 30%;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1rem 0.5rem 1rem; 
+}
+
+.search .search_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 30px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+.login .login_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+.comment_dialog input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.comment_dialog input[type=text]:focus {
+    width: 80%;
+}
+
+.comment_dialog .comment_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    padding-bottom: 80px;
+    resize: both; 
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+
+
+
+.new_comment .comment_message {
+    font-size: 30px;
+    width: 50%;
+    height: 130px;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1rem 0.5rem 1rem; 
+}
+
+.search .comment_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 30px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+.filter_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: inline;
+    font-size: 30px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+.find {
+    font-size: 30px; 
+    margin: 0; 
+    text-align: center;  
+}
+
+.check_in {
+    font-size: 35px;
+    width: 100%;
+    padding-top: 70px;  
+    padding-bottom: 30px; 
+    text-align: center;
+    margin: 0;
+}
+
+.map {
+    margin: 0px 0px 0px 0px;
+    padding-right: 0px;
+    padding-bottom: 80px; 
+}
+
+.actionlist {
+    padding-left: 80px;
+    text-align: left;
+    margin: 50px 0px 0px 0px;
+    font-size: 40px; 
+    line-height: 10px; 
+}
+
+.actionset {
+    padding-left: 100px; 
+}
+
+.padding-left {
+    padding-left: 0px; 
+}
+
+.message_type {
+    position: relative;
+    top: 100px;
+    left: -20px; 
+    bottom: 50px;   
+    padding-bottom: 120px; 
+}
+
+.check {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.comments {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-top: 0px;
+}
+
+.comments h2{
+    display: inline; 
+}
+.upvote {
+    padding-left: 40px;
+    display: inline;
+    font-size: 50px;
+
+}
+
+.c_in {
+    padding-top: 50px;
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 30px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+.com_in {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 30px; 
+    margin: auto; 
+    padding-top: 15px;
+    padding-bottom: 120px;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+#filter {
+    padding-top: 100px; 
+    font-size: 30px;
+    text-align: center; 
+}
+
+#filter div{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+/*
+input[type="radio"] {
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(0deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%),
+                      -webkit-linear-gradient(90deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%);
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+                0 0 0 1px hsla(0,0%,0%,.6),
+                0 2px 3px hsla(0,0%,0%,.6),
+                0 4px 3px hsla(0,0%,0%,.4),
+                0 6px 6px hsla(0,0%,0%,.2),
+                0 10px 6px hsla(0,0%,0%,.2);
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin-right: 15px;
+    position: relative;
+    width: 15px;
+    -webkit-appearance: none;
+    padding-right: 5px;
+}
+
+input[type=radio]:not(old) + label{
+    display: inline-block;
+    margin-left: -2em;
+    line-height: 1.5em; 
+}
+
+
+label:before {
+    content: "";
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,.3), 0px 1px 0px 0px rgba(225, 225, 225,.8);
+}
+
+.radio label:before {
+    border-radius: 8px;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+*/

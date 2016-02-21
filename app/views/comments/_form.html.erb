@@ -1,0 +1,4 @@
+<%= form_for([@place, @place.comments.build]) do |f| %>
+	<%= f.text_area :content, placeholder: "add a comment", class: "comment_message" %>
+    <%= f.submit("Create Comment", :class => "com_in") %>
+<% end %>
