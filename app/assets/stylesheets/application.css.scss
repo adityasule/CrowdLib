@@ -1,0 +1,154 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "partials/variables";
+@import "partials/normalize";
+
+#title {
+    padding: 10px;
+    color: #000000;  
+    text-align: center; 
+    padding-top: 50px; 
+}
+
+#main {
+    text-align: center;
+
+}
+
+
+*{
+    box-sizing: border-box; 
+    font-family: "Josefin Slab", sans-serif; 
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    font-family: "Josefin Slab", sans-serif; 
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+h1 {
+    font-size: 100px; 
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h4 {
+    font-size: 30px;
+    text-align: right;
+}
+
+input[type=text] {
+    border: 1px solid #333;
+    outline: none; 
+    transition: 0.5s;
+}
+
+input[type=text]:focus {
+    border: 1px solid #000;
+}
+
+meter {
+    width: 260px;
+    height: 20px;
+    border: 1px solid #ccc; 
+    margin: 11px 0px 11px 80px;
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: whiteSmoke;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #ccc; 
+}
+
+a {
+    color: #808080;
+    &:hover {
+        color: #000000;
+        text-decoration: none; 
+    }
+}
+
+.search .search_message {
+    font-size: 20px;
+    width: 15%;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1rem 0.5rem 1rem; 
+}
+
+.search .search_submit {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        background: #000;
+        color: #fff; 
+    } 
+ 
+}
+
+.find {
+    font-size: 30px; 
+    margin: 10px 0px 10px 130px; 
+    text-align: center;  
+}
+
+.check_in {
+    font-size: 30px;
+    margin: 50px 0px 0px 10px; 
+    text-align: center; 
+}
+
+.map {
+    margin: 0px 0px 0px 0px;
+    padding-right: 0px;
+}
+
+.actionlist {
+    text-align: left;
+    margin: 50px 0px 10px 0px; 
+}
+
