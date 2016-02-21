@@ -28,20 +28,22 @@
     <% @places.order(clicks: :desc).each do |place| 
       count += 1%>
         <div class="col-4">
-            <h2> <%= place.name %> </h2>
-            <div class="col-1"></div>
-            <div class="col-1">
-                <h4> Crowd </h4>
-                <h4> Noise </h4> 
-                <h4> Clean </h4> 
+            <div class="find">
+                <h2> 
+                    <%= link_to place.name, place %>
+                </h2>
             </div>
-            <div class="col-2"> 
-                <meter value="<%= place.crowd_current/place.crowd_max %>"></meter>
+                <div class="col-4">
+                    <h4> Crowd </h4>
+                    <h4> Noise </h4> 
+                    <h4> Clean </h4> 
+                </div>
+                <div class="col-6">
+                    <meter value="<%= place.crowd_current/place.crowd_max %>"></meter>
                 <meter value="<%= place.noise_max/place.noise_num %>"></meter>
                 <meter value="<%= place.comfort_max/place.comfort_num %>"></meter> 
-                <div class="find">
-                    <%= link_to 'find', place %>
-                </div> 
+                </div>
+                <div class="col-2"></div> 
         </div>
         <% break if count == 6 %>
     <% end %>
