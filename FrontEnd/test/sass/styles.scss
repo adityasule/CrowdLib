@@ -1,0 +1,262 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+@import "compass/css3";
+
+#title {
+    padding: 10px;
+    color: #000000;  
+    text-align: center; 
+    padding-top: 50px; 
+}
+
+#main {
+    text-align: center;
+
+}
+
+#login{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+
+*{
+    box-sizing: border-box; 
+    font-family: "Josefin Slab", sans-serif; 
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.login_message {width:100%; height: 30px;}
+.password_message {width:100%; height: 30px;}
+
+body {
+    font-family: "Josefin Slab", sans-serif; 
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+h1 {
+    font-size: 100px; 
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h4 {
+    font-size: 30px;
+    text-align: right;
+}
+
+input[type=text] {
+    border: 1px solid #333;
+    outline: none; 
+    transition: 0.5s;
+}
+
+input[type=text]:focus {
+    border: 1px solid #000;
+}
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 80%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #0066CC;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 80%;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+meter {
+    width: 260px;
+    height: 20px;
+    border: 1px solid #ccc; 
+    margin: 11px 0px 11px 80px;
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: whiteSmoke;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #ccc; 
+}
+
+a {
+    color: #808080;
+    &:hover {
+        color: #000000;
+        text-decoration: none; 
+    }
+    &:visited {
+        text-decoration: none; 
+    }
+    &:active {
+        text-decoration: none; 
+    }
+}
+
+.search .search_message {
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1rem 0.5rem 1rem; 
+}
+
+.search .search_submit {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        background: #000;
+        color: #fff; 
+    }  
+}
+
+.login .login_submit {
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    display: block;
+    font-size: 20px; 
+    margin: 1rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        background: #000;
+        color: #fff; 
+    }
+}
+
+
+.find {
+    font-size: 30px; 
+    margin: 10px 0px 10px 130px; 
+    text-align: center;  
+}
+
+.check_in {
+    font-size: 35px;
+    width: 80%;
+    padding-top: 50px;  
+    text-align: center; 
+}
+
+.map {
+    margin: 0px 0px 0px 0px;
+    padding-right: 0px;
+}
+
+.actionlist {
+    text-align: left;
+    margin: 50px 0px 20px 0px;
+    font-size: 40px; 
+}
+
+.actionset {
+    padding-left: 100px; 
+}
+

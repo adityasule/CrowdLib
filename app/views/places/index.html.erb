@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico"/>
+
+<div id="login">
+    <form class="login">
+        <input class="login_message" placeholder="Username" type="text" id="locationlogin">   
+        <input class="password_message" placeholder="Password" type="text" id="password">   
+        <input type="submit" class="login_submit" value="login"> 
+    </form> 
+</div>
+
+
+<div id="title">
+    <h1> CrowdLib </h1> 
+</div>
+<div id="taskbar">
+    <div class="col-12">
+        <%= form_tag("/places", method: :get, :class => "search" ) do %>
+            <%= text_field_tag(:q, "Where do you want to study", :class => "typeahead search_message")%>
+            <%= submit_tag("Search", :class => "search_submit") %>
+        <% end %>
+    </div>
+</div>
+
+
+<div id="filter">
+    <%= form_tag("/places#filter", method: :get) do %>
+        <div>
+            <%= radio_button_tag(:filter, "popularity") %>
+            <%= label_tag(:filter_popularity, "popularity") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "crowd") %>
+            <%= label_tag(:filter_crowd, "crowd") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "noise") %>
+            <%= label_tag(:filter_noise, "noise") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "comfort") %>
+            <%= label_tag(:filter_comfort, "comfort") %>
+        </div>
+        <div>
+            <%= submit_tag("Search") %>
+        </div>
+    <% end %>
+</div>
+
+
+<div id="main">
+    <% count = 0 %>
+    <% @places.each do |place| 
+      count += 1%>
+        <div class="col-4">
+            <div class="find">
+                <h2> 
+                    <%= link_to place.name, place %>
+                </h2>
+            </div>
+                <div class="col-4">
+                    <h4> Crowd </h4>
+                    <h4> Noise </h4> 
+                    <h4> Clean </h4> 
+                </div>
+                <div class="col-6">
+                    <meter value="<%= (place.crowd_max/((place.crowd_current)*1.0))/10.0 %>"></meter>
+                    <meter value="<%= (place.noise_max/((place.noise_num)*1.0))/10.0 %>"></meter>
+                    <meter value="<%= (place.comfort_max/((place.comfort_num)*1.0))/10.0 %>"></meter>  
+                </div>
+                <div class="col-2"></div> 
+        </div>
+        <% break if count == 12 %>
+    <% end %>
+</div>
+
+<%= link_to 'New/places Place', new_place_path %>

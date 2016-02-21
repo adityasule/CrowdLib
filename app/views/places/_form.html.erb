@@ -1,0 +1,61 @@
+<%= form_for(@place) do |f| %>
+  <% if @place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% @place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :locationx %><br>
+    <%= f.text_field :locationx %>
+  </div>
+  <div class="field">
+    <%= f.label :locationy %><br>
+    <%= f.text_field :locationy %>
+  </div>
+  <div class="field">
+    <%= f.label :clicks %><br>
+    <%= f.number_field :clicks %>
+  </div>
+  <div class="field">
+    <%= f.label :crowd_max %><br>
+    <%= f.number_field :crowd_max %>
+  </div>
+  <div class="field">
+    <%= f.label :crowd_current %><br>
+    <%= f.number_field :crowd_current %>
+  </div>
+  <div class="field">
+    <%= f.label :noise_max %><br>
+    <%= f.number_field :noise_max %>
+  </div>
+  <div class="field">
+    <%= f.label :noise_num %><br>
+    <%= f.number_field :noise_num %>
+  </div>
+  <div class="field">
+    <%= f.label :comfort_max %><br>
+    <%= f.number_field :comfort_max %>
+  </div>
+  <div class="field">
+    <%= f.label :comfort_num %><br>
+    <%= f.number_field :comfort_num %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

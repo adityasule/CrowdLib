@@ -1,0 +1,88 @@
+<p id="notice"><%= notice %></p>
+<div id="title">
+    <h1> <%= @place.name %> </h1> 
+</div>
+<div class="col-1"></div>
+<div class="col-4">
+    <p> <%= @place.description %></p>
+
+    <br> 
+    <div class="col-4">
+        <h4> Crowd </h4>
+        <h4> Noise </h4>
+        <h4> Clean </h4>
+    </div> 
+    <div class="col-6">
+        <meter value="<%= (@place.crowd_max/((@place.crowd_current)*1.0))/10.0 %>"></meter>
+        <meter value="<%= (@place.noise_max/((@place.noise_num)*1.0))/10.0 %>"></meter>
+        <meter value="<%= (@place.comfort_max/((@place.comfort_num)*1.0))/10.0 %>"></meter> 
+    </div>
+    <div class="col-2"></div> 
+
+
+
+     
+    <a href="#check_in" class="smoothScroll">
+        <h2 class="message_type"> Want to check in? </h2> 
+    </a>
+</div>
+<div class="col-1"></div> 
+<div class="col-6 map">
+   <!-- Set height and width with CSS -->
+            <div id="googleMap" style="height:450px;width:80%;"></div>
+
+            <!-- Add Google Maps -->
+                <script src="http://maps.googleapis.com/maps/api/js"></script>
+                <script>
+                var myCenter = new google.maps.LatLng(<%= @place.locationx %>, <%= @place.locationy %>);
+                function initialize() {
+                    var mapProp = {
+                        center:myCenter,
+                        zoom:16,
+                        scrollwheel:false,
+                        draggable:true,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                        };
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    var marker = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP, 
+                        position:myCenter,
+                    });
+                    marker.setMap(map);
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'page:load', initialize);
+                </script>
+        </div>
+
+</div>
+
+<p> Clicks-debug <%= @place.clicks %> </p>
+<div class="col-12">
+    <%= render 'edit' %>
+</div>
+<div class="col-12 comments">
+    <h1> Comments </h2>
+    
+    <div>
+        <%= render "comments/form" %>
+    </div>
+    <% max_comments = 100 %>
+    <% @place.comments.order(upvotes: :desc).each do |the_comment| %>
+        <h2><%= "\"" + the_comment.content + "\"" %></h2>
+        <div class="upvote">
+            <%= link_to ' + ', edit_place_comment_path(@place, the_comment) %>
+        </div>
+        <br>
+        <% max_comments -= 1 %>
+        <% break if max_comments == 0 %>
+    <% end %>
+</div>
+
+
+<div class="col-3"></div> 
+<script> 
+    $(document).ready();
+</script> 
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>
