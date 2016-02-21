@@ -80,22 +80,25 @@ h1 {
 }
 
 h2 {
-    font-size: 60px;
+    padding-left: 50px; 
+    font-size: 40px;
     font-weight: 500;
     color: inherit; 
     line-height: 2em;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 27px;
     text-align: right;
     font-weight: 500;
     color: inherit; 
     line-height: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 0;
+    vertical-align: center;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
 
 }
 
@@ -198,10 +201,11 @@ input[type=range]:focus::-ms-fill-upper {
     background: #ccc;
 }
 meter {
-    width: 80%;
+    width: 60%;
     height: 20px;
     border: 1px solid #ccc; 
-    margin: 5px;
+    margin: 25px 0px 25px 0;
+    left: 10px; 
 }
 
 meter::-webkit-meter-bar {
@@ -212,6 +216,7 @@ meter::-webkit-meter-bar {
 meter::-webkit-meter-optimum-value {
     background: #ccc; 
 }
+
 
 a {
     color: #808080;
@@ -226,6 +231,8 @@ a {
         text-decoration: none; 
     }
 }
+
+
 
 .search .search_message {
     font-size: 20px;
