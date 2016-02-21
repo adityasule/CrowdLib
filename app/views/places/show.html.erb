@@ -46,42 +46,11 @@
                     marker.setMap(map);
                 }
                 google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'page:load', initialize);
                 </script>
         </div>
 
 </div>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
-
-<p>
-  <strong>Locationx:</strong>
-  <%= @place.locationx %>
-</p>
-
-<p>
-  <strong>Locationy:</strong>
-  <%= @place.locationy %>
-</p>
-
-<p>
-  <strong>Crowd:</strong>
-  <%= @place.crowd %>
-</p>
-
-<p>
-  <strong>Noise:</strong>
-  <%= @place.noise %>
-</p>
-
-<p>
-  <strong>Comfort:</strong>
-  <%= @place.comfort %>
-</p>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
