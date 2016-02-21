@@ -39,7 +39,7 @@
                     <h4> Clean </h4> 
                 </div>
                 <div class="col-6">
-                  <meter value="<%= (place.crowd_current/place.crowd_max)/10.0 %>"></meter>
+                  <meter value="<%= (((place.crowd_current)/1.0)/place.crowd_max) %>"></meter>
                   <meter value="<%= (place.noise_max/place.noise_num)/10.0 %>"></meter>
                   <meter value="<%= (place.comfort_max/place.comfort_num)/10.0 %>"></meter> 
                 </div>

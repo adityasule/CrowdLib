@@ -13,7 +13,7 @@
         <h4> Clean </h4>
     </div> 
     <div class="col-6">
-        <meter value="<%= (@place.crowd_current/@place.crowd_max)/10.0 %>"></meter>
+        <meter value="<%= ((@place.crowd_current*1.0)/@place.crowd_max) %>"></meter>
         <meter value="<%= (@place.noise_max/@place.noise_num)/10.0 %>"></meter>
         <meter value="<%= (@place.comfort_max/@place.comfort_num)/10.0 %>"></meter> 
     </div>
@@ -83,31 +83,9 @@
     <h1> Comments </h2>
     
     <div>
-        <form class="comment_dialog">
-            <input class="comment_message" placeholder="Add a comment" type="text" id="locationlogin">   
-            <input type="submit" class="comment_submit" value="login"> 
-        </form> 
+        <%= render "comments/form" %>
     </div>
-    <h2> "10/10 a masterpiece" </h2>
-    <div class="upvote">
-        <a href="#" class="actions_go"> + </a>
-    </div>
-    <br> 
-    <h2> "I have the urge for Serge" </h2>
-    <div class="upvote">
-        <a href="#" class="actions_go"> + </a>
-    </div>
-    <br> 
-    <h2> "I'm not a bitch boy...I'm a bitch man!" </h2>
-    <div class="upvote">
-        <a href="#" class="actions_go"> + </a>
-    </div>
-    <br> 
-    <h2> "Sometimes I like to climb in your bed and leave before you wake up" </h2>
-    <div class="upvote">
-        <a href="#" class="actions_go"> + </a>
-    </div>
-    <br> 
+    <%= render @place.comments %>
 </div>
 
 
