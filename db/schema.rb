@@ -11,17 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220232637) do
+ActiveRecord::Schema.define(version: 20160221041709) do
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.float    "locationx"
     t.float    "locationy"
-    t.float    "crowd"
-    t.float    "noise"
-    t.float    "comfort"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "clicks"
+    t.integer  "crowd_max"
+    t.integer  "crowd_current"
+    t.integer  "noise_max"
+    t.integer  "noise_num"
+    t.integer  "comfort_max"
+    t.integer  "comfort_num"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.text     "description"
   end
 
 end

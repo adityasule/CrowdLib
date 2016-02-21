@@ -24,16 +24,36 @@
     <%= f.text_field :locationy %>
   </div>
   <div class="field">
-    <%= f.label :crowd %><br>
-    <%= f.text_field :crowd %>
+    <%= f.label :clicks %><br>
+    <%= f.number_field :clicks %>
   </div>
   <div class="field">
-    <%= f.label :noise %><br>
-    <%= f.text_field :noise %>
+    <%= f.label :crowd_max %><br>
+    <%= f.number_field :crowd_max %>
   </div>
   <div class="field">
-    <%= f.label :comfort %><br>
-    <%= f.text_field :comfort %>
+    <%= f.label :crowd_current %><br>
+    <%= f.number_field :crowd_current %>
+  </div>
+  <div class="field">
+    <%= f.label :noise_max %><br>
+    <%= f.number_field :noise_max %>
+  </div>
+  <div class="field">
+    <%= f.label :noise_num %><br>
+    <%= f.number_field :noise_num %>
+  </div>
+  <div class="field">
+    <%= f.label :comfort_max %><br>
+    <%= f.number_field :comfort_max %>
+  </div>
+  <div class="field">
+    <%= f.label :comfort_num %><br>
+    <%= f.number_field :comfort_num %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
   </div>
   <div class="actions">
     <%= f.submit %>

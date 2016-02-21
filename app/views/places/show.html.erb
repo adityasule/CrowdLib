@@ -1,9 +1,10 @@
+<p id="notice"><%= notice %></p>
 <div id="title">
     <h1> <%= @place.name %> </h1> 
 </div>
 <div class="col-1"></div>
 <div class="col-4">
-    <p> Moustachios house is a great way to learn about almost nothing! We don't even get to see stars! </p>
+    <p> <%= @place.description %></p>
 
     <br> 
     <div class="col-4">
@@ -12,9 +13,9 @@
         <h4> Clean </h4>
     </div> 
     <div class="col-6">
-        <meter value="<%= @place.crowd %>"></meter>
-        <meter value="<%= @place.noise %>"></meter>
-        <meter value="<%= @place.comfort %>"></meter> 
+        <meter value="<%= @place.crowd_current/@place.crowd_max %>"></meter>
+        <meter value="<%= @place.noise_max/@place.noise_num %>"></meter>
+        <meter value="<%= @place.comfort_max/@place.comfort_num %>"></meter> 
     </div>
     <div class="col-2"></div> 
 
@@ -56,6 +57,7 @@
 
 </div>
 
+<p> Clicks-debug <%= @place.clicks %> </p>
 <div class="col-12">
 <div id="check_in" class="col-3"></div>
     <div class="col-6 check">
@@ -78,9 +80,38 @@
     <div class="col-3"></div> 
 </div>
 <div class="col-12 comments">
-    <h2> 10/10 a masterpiece </h2>
+    <h1> Comments </h2>
+    
+    <div>
+        <form class="comment_dialog">
+            <input class="comment_message" placeholder="Add a comment" type="text" id="locationlogin">   
+            <input type="submit" class="comment_submit" value="login"> 
+        </form> 
+    </div>
+    <h2> "10/10 a masterpiece" </h2>
+    <div class="upvote">
+        <a href="#" class="actions_go"> + </a>
+    </div>
+    <br> 
+    <h2> "I have the urge for Serge" </h2>
+    <div class="upvote">
+        <a href="#" class="actions_go"> + </a>
+    </div>
+    <br> 
+    <h2> "I'm not a bitch boy...I'm a bitch man!" </h2>
+    <div class="upvote">
+        <a href="#" class="actions_go"> + </a>
+    </div>
+    <br> 
+    <h2> "Sometimes I like to climb in your bed and leave before you wake up" </h2>
+    <div class="upvote">
+        <a href="#" class="actions_go"> + </a>
+    </div>
+    <br> 
 </div>
 
+
+<div class="col-3"></div> 
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

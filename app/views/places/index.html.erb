@@ -1,11 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<link rel="icon" type="image/x-icon" href="/images"/>
+
 <div id="login">
     <form class="login">
         <input class="login_message" placeholder="Username" type="text" id="locationlogin">   
         <input class="password_message" placeholder="Password" type="text" id="password">   
         <input type="submit" class="login_submit" value="login"> 
     </form> 
-
-
 </div>
 
 
@@ -22,7 +24,9 @@
 </div>
 
 <div id="main">
-    <% @places.each do |place| %>
+    <% count = 0 %>
+    <% @places.order(clicks: :desc).each do |place| 
+      count += 1%>
         <div class="col-4">
             <div class="find">
                 <h2> 
@@ -35,12 +39,13 @@
                     <h4> Clean </h4> 
                 </div>
                 <div class="col-6">
-                    <meter value="<%= place.crowd %>"></meter>
-                    <meter value="<%= place.noise %>"></meter>
-                    <meter value="<%= place.comfort %>"></meter> 
+                  <meter value="<%= place.crowd_current/place.crowd_max %>"></meter>
+                  <meter value="<%= place.noise_max/place.noise_num %>"></meter>
+                  <meter value="<%= place.comfort_max/place.comfort_num %>"></meter> 
                 </div>
                 <div class="col-2"></div> 
         </div>
+        <% break if count == 6 %>
     <% end %>
 </div>
 
