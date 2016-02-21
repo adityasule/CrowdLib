@@ -2,6 +2,10 @@
     <div class="col-6 check">
         <%= form_for(@place) do |f| %>
           <div class="field">
+            <h4 class="actionlist"> Crowd </h4> 
+            <input type="range" min="0" max="10" name="place[crowd_change]" id="crowd_change">
+          </div>
+          <div class="field">
             <h4 class="actionlist"> Noise </h4> 
             <input type="range" min="0" max="10" name="place[noise_change]" id="noise_change">
           </div>

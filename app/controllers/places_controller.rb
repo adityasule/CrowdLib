@@ -37,7 +37,7 @@ class PlacesController < ApplicationController
 
   # GET /places/1/edit
   def edit
-    @place.crowd_current += 1
+    @place.crowd_max += change_place_params
 
     @place.noise_max += change_place_params[:noise_change]
     @place.noise_num += 1
@@ -69,6 +69,7 @@ class PlacesController < ApplicationController
   # PATCH/PUT /places/1
   # PATCH/PUT /places/1.json
   def update
+    @place.crowd_max += change_place_params[:crowd_change].to_i
     @place.crowd_current += 1
 
     @place.noise_max += change_place_params[:noise_change].to_i
@@ -104,6 +105,6 @@ class PlacesController < ApplicationController
     end
 
     def change_place_params
-      params.require(:place).permit(:noise_change, :comfort_change)
+      params.require(:place).permit(:crowd_change, :noise_change, :comfort_change)
     end
 end

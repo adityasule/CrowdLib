@@ -65,13 +65,13 @@
                     <h4> Clean </h4> 
                 </div>
                 <div class="col-6">
-                  <meter value="<%= (((place.crowd_current)/1.0)/place.crowd_max) %>"></meter>
-                  <meter value="<%= (place.noise_max/place.noise_num)/10.0 %>"></meter>
-                  <meter value="<%= (place.comfort_max/place.comfort_num)/10.0 %>"></meter> 
+                    <meter value="<%= (place.crowd_max/((place.crowd_current)*1.0))/10.0 %>"></meter>
+                    <meter value="<%= (place.noise_max/((place.noise_num)*1.0))/10.0 %>"></meter>
+                    <meter value="<%= (place.comfort_max/((place.comfort_num)*1.0))/10.0 %>"></meter>  
                 </div>
                 <div class="col-2"></div> 
         </div>
-        <% break if count == 6 %>
+        <% break if count == 12 %>
     <% end %>
 </div>
 
