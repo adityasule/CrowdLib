@@ -17,7 +17,7 @@
 <div id="taskbar">
     <div class="col-12">
         <%= form_tag("/places", method: :get, :class => "search" ) do %>
-            <%= text_field_tag(:q, "Where do you want to study", :class => "typeahead search_message")%>
+            <%= text_field_tag(:q, "", :class => "typeahead search_message")%>
             <%= submit_tag("Search", :class => "search_submit") %>
         <% end %>
     </div>
