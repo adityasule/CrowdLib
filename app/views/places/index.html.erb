@@ -36,9 +36,9 @@
                 <h4> Clean </h4> 
             </div>
             <div class="col-2"> 
-                <meter value="<%= places.crowd_current/place.crowd_max %>"></meter>
-                <meter value="<%= places.noise_max/place.noise_num %>"></meter>
-                <meter value="<%= places.comfort_max/place.comfort_num %>"></meter> 
+                <meter value="<%= place.crowd_current/place.crowd_max %>"></meter>
+                <meter value="<%= place.noise_max/place.noise_num %>"></meter>
+                <meter value="<%= place.comfort_max/place.comfort_num %>"></meter> 
                 <div class="find">
                     <%= link_to 'find', place %>
                 </div> 
