@@ -25,20 +25,19 @@
     <% @places.each do |place| %>
         <div class="col-4">
             <h2> <%= place.name %> </h2>
-            <div class="col-1"></div>
-            <div class="col-1">
-                <h4> Crowd </h4>
-                <h4> Noise </h4> 
-                <h4> Clean </h4> 
-            </div>
-            <div class="col-2"> 
-                <meter value="<%= place.crowd %>"></meter>
-                <meter value="<%= place.noise %>"></meter>
-                <meter value="<%= place.comfort %>"></meter> 
+                <div class="col-3">
+                    <h4> Crowd </h4>
+                    <h4> Noise </h4> 
+                    <h4> Clean </h4> 
+                </div>
+                <div class="col-9">
+                    <meter value="<%= place.crowd %>"></meter>
+                    <meter value="<%= place.noise %>"></meter>
+                    <meter value="<%= place.comfort %>"></meter> 
+                </div>
                 <div class="find">
-                    <a href="ugl.html" class="actions_go"> Find </a> 
+                        <a href="ugl.html" class="actions_go"> Find </a> 
                 </div> 
-            </div>
         </div>
     <% end %>
 </div>

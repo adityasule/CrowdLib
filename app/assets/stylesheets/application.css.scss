@@ -69,16 +69,34 @@ body {
 }
 
 h1 {
-    font-size: 100px; 
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit; 
+    margin: .67em 0; 
 }
 
 h2 {
     font-size: 60px;
+    font-weight: 500;
+    color: inherit; 
+    line-height: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 h4 {
     font-size: 30px;
     text-align: right;
+    font-weight: 500;
+    color: inherit; 
+    line-height: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
 }
 
 input[type=text] {
@@ -180,10 +198,10 @@ input[type=range]:focus::-ms-fill-upper {
     background: #ccc;
 }
 meter {
-    width: 260px;
+    width: 80%;
     height: 20px;
     border: 1px solid #ccc; 
-    margin: 11px 0px 11px 80px;
+    margin: 5px;
 }
 
 meter::-webkit-meter-bar {
@@ -249,7 +267,7 @@ a {
 
 .find {
     font-size: 30px; 
-    margin: 10px 0px 10px 130px; 
+    margin: 0; 
     text-align: center;  
 }
 
