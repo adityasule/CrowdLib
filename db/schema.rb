@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20160221090410) do
     t.string   "name"
     t.float    "locationx"
     t.float    "locationy"
-    t.integer  "clicks"
+    t.integer  "clicks",        default: 0
     t.integer  "crowd_max"
     t.integer  "crowd_current"
     t.integer  "noise_max"
     t.integer  "noise_num"
     t.integer  "comfort_max"
     t.integer  "comfort_num"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.text     "description"
   end
 
