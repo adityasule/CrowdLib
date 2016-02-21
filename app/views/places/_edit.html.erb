@@ -1,0 +1,17 @@
+<div id="check_in" class="col-3"></div>
+    <div class="col-6 check">
+        <%= form_for(@place) do |f| %>
+          <div class="field">
+            <h4 class="actionlist"> Noise </h4> 
+            <input type="range" min="0" max="10" name="place[noise_change]" id="noise_change">
+          </div>
+          <div class="field">
+            <h4 class="actionlist"> Comfort </h4> 
+            <input type="range" min="0" max="10" name="place[comfort_change]" id="comfort_change">
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+    </div>
+<div class="col-3"></div> 

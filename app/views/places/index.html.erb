@@ -23,9 +23,35 @@
     </div>
 </div>
 
+
+<div id="filter">
+    <%= form_tag("/places#filter", method: :get) do %>
+        <div>
+            <%= radio_button_tag(:filter, "popularity") %>
+            <%= label_tag(:filter_popularity, "popularity") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "crowd") %>
+            <%= label_tag(:filter_crowd, "crowd") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "noise") %>
+            <%= label_tag(:filter_noise, "noise") %>
+        </div>
+        <div>
+            <%= radio_button_tag(:filter, "comfort") %>
+            <%= label_tag(:filter_comfort, "comfort") %>
+        </div>
+        <div>
+            <%= submit_tag("Search") %>
+        </div>
+    <% end %>
+</div>
+
+
 <div id="main">
     <% count = 0 %>
-    <% @places.order(clicks: :desc).each do |place| 
+    <% @places.each do |place| 
       count += 1%>
         <div class="col-4">
             <div class="find">
@@ -49,4 +75,4 @@
     <% end %>
 </div>
 
-<%= link_to 'New Place', new_place_path %>
+<%= link_to 'New/places Place', new_place_path %>

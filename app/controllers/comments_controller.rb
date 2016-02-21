@@ -3,7 +3,9 @@
 	before_action :set_place
 
 	def create
-		@comment = @place.comments.create(comment_params)
+		unless comment_params[:content] == ""
+			comment = @place.comments.create(comment_params)
+		end
 		redirect_to @place
 	end
 

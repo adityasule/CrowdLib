@@ -59,25 +59,7 @@
 
 <p> Clicks-debug <%= @place.clicks %> </p>
 <div class="col-12">
-<div id="check_in" class="col-3"></div>
-    <div class="col-6 check">
-        <form action="data.asp" method="get">
-            <h4 class="actionlist"> Crowd </h4> 
-            <input type="range" min="0" max="10">
-        </form> 
-        <form action="data.asp" method="get">
-            <h4 class="actionlist"> Noise </h4> 
-            <input type="range" min="0" max="10">
-        </form> 
-        <form action="data.asp" method="get">
-            <h4 class="actionlist"> Cleanliness </h4> 
-            <input type="range" min="0" max="10">
-        </form>
-        <div class="check_in">
-            <a href="#" class="actions_go"> Check In </a>
-        </div> 
-    </div> 
-    <div class="col-3"></div> 
+    <%= render 'edit' %>
 </div>
 <div class="col-12 comments">
     <h1> Comments </h2>

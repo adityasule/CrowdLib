@@ -4,7 +4,21 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+
+    if params[:filter].present?
+      case params[:filter]
+      when "popularity"
+        @places = Place.order(clicks: :desc)
+      when "crowd"
+        @places = Place.all.sort  { |a,b| (((a.crowd_current) * 1.0)/a.crowd_max) <=> (((b.crowd_current) * 1.0)/b.crowd_max) }
+      when "noise"
+        @places = Place.all.sort  { |a,b| (((a.noise_max) * 1.0)/a.noise_num) <=> (((b.noise_max) * 1.0)/b.noise_num) }
+      when "comfort"
+        @places = Place.all.sort  { |a,b| (((a.comfort_max) * 1.0)/a.comfort_num) <=> (((b.comfort_max) * 1.0)/b.comfort_num) }
+      end
+    else
+      @places = Place.order(clicks: :desc)
+    end
   end
 
   # GET /places/1
@@ -21,6 +35,17 @@ class PlacesController < ApplicationController
 
   # GET /places/1/edit
   def edit
+    @place.crowd_current += 1
+
+    @place.noise_max += change_place_params[:noise_change]
+    @place.noise_num += 1
+
+    @place.comfort_max += change_place_params[:comfort_change]
+    @place.comfort_num += 1
+
+    @place.save
+
+    redirect_to @place
   end
 
   # POST /places
@@ -42,15 +67,17 @@ class PlacesController < ApplicationController
   # PATCH/PUT /places/1
   # PATCH/PUT /places/1.json
   def update
-    respond_to do |format|
-      if @place.update(place_params)
-        format.html { redirect_to @place, notice: 'Place was successfully updated.' }
-        format.json { render :show, status: :ok, location: @place }
-      else
-        format.html { render :edit }
-        format.json { render json: @place.errors, status: :unprocessable_entity }
-      end
-    end
+    @place.crowd_current += 1
+
+    @place.noise_max += change_place_params[:noise_change].to_i
+    @place.noise_num += 1
+
+    @place.comfort_max += change_place_params[:comfort_change].to_i
+    @place.comfort_num += 1
+
+    @place.save
+
+    redirect_to @place
   end
 
   # DELETE /places/1
@@ -72,5 +99,9 @@ class PlacesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
       params.require(:place).permit(:name, :locationx, :locationy, :clicks, :crowd_max, :crowd_current, :noise_max, :noise_num, :comfort_max, :comfort_num, :description)
+    end
+
+    def change_place_params
+      params.require(:place).permit(:noise_change, :comfort_change)
     end
 end
