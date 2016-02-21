@@ -131,11 +131,11 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
-    height: 16px;
-    width: 16px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     background: #0066CC;
-    margin-top: -4px;
+    margin-top: -10px;
 }
 input[type=range]:focus {
     outline: none;
@@ -205,7 +205,7 @@ meter {
     width: 100%;
     height: 20px;
     border: 1px solid #ccc; 
-    margin: 25px 0px 25px 0; 
+    margin: 25px 0px 25px 0px; 
 }
 
 meter::-webkit-meter-bar {
@@ -277,7 +277,28 @@ p {
         color: #000000; 
     }  
 }
+.comment_dialog .comment_message {
+    font-size: 30px;
+    width: 30%;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1rem 0.5rem 1rem; 
+}
 
+.search .comment_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 30px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    &:hover {
+        color: #000000; 
+    }  
+}
 
 .find {
     font-size: 30px; 
@@ -287,11 +308,11 @@ p {
 
 .check_in {
     font-size: 35px;
-    width: 80%;
+    width: 100%;
     padding-top: 70px;  
     padding-bottom: 80px; 
     text-align: center;
-
+    margin: 0;
 }
 
 .map {
@@ -301,6 +322,7 @@ p {
 }
 
 .actionlist {
+    padding-left: 80px;
     text-align: left;
     margin: 50px 0px 0px 0px;
     font-size: 40px; 
@@ -321,4 +343,23 @@ p {
     left: -20px; 
     bottom: 50px;   
     padding-bottom: 120px; 
+}
+
+.check {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.comments {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.comments h2{
+    display: inline; 
+}
+.upvote {
+    display: inline;
+    font-size: 80px;
+
 }
