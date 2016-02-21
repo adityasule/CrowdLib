@@ -18,7 +18,11 @@ class PlacesControllerTest < ActionController::TestCase
 
   test "should create place" do
     assert_difference('Place.count') do
+<<<<<<< HEAD
       post :create, place: { comfort: @place.comfort, crowd: @place.crowd, locationx: @place.locationx, locationy: @place.locationy, name: @place.name, noise: @place.noise }
+=======
+      post :create, place: { clicks: @place.clicks, comfort_max: @place.comfort_max, comfort_num: @place.comfort_num, crowd_current: @place.crowd_current, crowd_max: @place.crowd_max, locationx: @place.locationx, locationy: @place.locationy, name: @place.name, noise_max: @place.noise_max, noise_num: @place.noise_num }
+>>>>>>> dev2
     end
 
     assert_redirected_to place_path(assigns(:place))
@@ -35,7 +39,11 @@ class PlacesControllerTest < ActionController::TestCase
   end
 
   test "should update place" do
+<<<<<<< HEAD
     patch :update, id: @place, place: { comfort: @place.comfort, crowd: @place.crowd, locationx: @place.locationx, locationy: @place.locationy, name: @place.name, noise: @place.noise }
+=======
+    patch :update, id: @place, place: { clicks: @place.clicks, comfort_max: @place.comfort_max, comfort_num: @place.comfort_num, crowd_current: @place.crowd_current, crowd_max: @place.crowd_max, locationx: @place.locationx, locationy: @place.locationy, name: @place.name, noise_max: @place.noise_max, noise_num: @place.noise_num }
+>>>>>>> dev2
     assert_redirected_to place_path(assigns(:place))
   end
 
