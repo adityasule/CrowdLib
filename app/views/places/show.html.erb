@@ -1,34 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div id="title">
+    <h1> <%= @place.name %> </h1> 
+</div>
+<div class="col-1"></div>
+<div class="col-4">
+    <br><br><br>
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Crowd </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Noise </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Cleanliness </h4> 
+        <input type="range" min="0" max="10">
+    </form>
+    <div class="check_in">
+        <a href="#" class="actions_go"> Check In </a>
+    </div> 
 
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
+</div> 
+<div class="col-1"></div> 
+<div class="col-6 map">
+   <!-- Set height and width with CSS -->
+            <div id="googleMap" style="height:600px;width:100%;"></div>
 
-<p>
-  <strong>Locationx:</strong>
-  <%= @place.locationx %>
-</p>
+            <!-- Add Google Maps -->
+                <script src="http://maps.googleapis.com/maps/api/js"></script>
+                <script>
+                var myCenter = new google.maps.LatLng(<%= @place.locationx %>, <%= @place.locationy %>);
+                function initialize() {
+                    var mapProp = {
+                        center:myCenter,
+                        zoom:16,
+                        scrollwheel:false,
+                        draggable:true,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                        };
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    var marker = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP, 
+                        position:myCenter,
+                    });
+                    marker.setMap(map);
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'page:load', initialize);
+                </script>
+        </div>
 
-<p>
-  <strong>Locationy:</strong>
-  <%= @place.locationy %>
-</p>
-
-<p>
-  <strong>Crowd:</strong>
-  <%= @place.crowd %>
-</p>
-
-<p>
-  <strong>Noise:</strong>
-  <%= @place.noise %>
-</p>
-
-<p>
-  <strong>Comfort:</strong>
-  <%= @place.comfort %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
