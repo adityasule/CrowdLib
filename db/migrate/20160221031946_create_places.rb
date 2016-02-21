@@ -4,7 +4,7 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :name
       t.float :locationx
       t.float :locationy
-      t.integer :clicks
+      t.integer :clicks, :default => 0
       t.integer :crowd_max
       t.integer :crowd_current
       t.integer :noise_max

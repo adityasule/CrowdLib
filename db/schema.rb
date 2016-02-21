@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221072834) do
+ActiveRecord::Schema.define(version: 20160221090410) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.integer  "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "upvotes"
   end
 
   add_index "comments", ["place_id"], name: "index_comments_on_place_id"

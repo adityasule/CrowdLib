@@ -7,6 +7,14 @@
 		redirect_to @place
 	end
 
+	def edit
+		@comment = Comment.find(params[:id])
+		@comment.upvotes ||= 0
+		@comment.upvotes += 1
+		@comment.save
+		redirect_to @place
+	end
+
 	def destroy
 
 	end

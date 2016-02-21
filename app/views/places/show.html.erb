@@ -85,7 +85,16 @@
     <div>
         <%= render "comments/form" %>
     </div>
-    <%= render @place.comments %>
+    <% max_comments = 100 %>
+    <% @place.comments.order(upvotes: :desc).each do |the_comment| %>
+        <h2><%= "\"" + the_comment.content + "\"" %></h2>
+        <div class="upvote">
+            <%= link_to ' + ', edit_place_comment_path(@place, the_comment) %>
+        </div>
+        <br>
+        <% max_comments -= 1 %>
+        <% break if max_comments == 0 %>
+    <% end %>
 </div>
 
 
