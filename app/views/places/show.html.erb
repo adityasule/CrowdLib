@@ -84,8 +84,8 @@
     
     <div>
         <form class="comment_dialog">
-            <input class="comment_message" placeholder="Add a comment" type="text" id="locationlogin">   
-            <input type="submit" class="comment_submit" value="login"> 
+            <input class="comment_message" placeholder="Add a comment!" type="text" id="locationlogin">   
+            <input type="submit" class="comment_submit" value="Submit"> 
         </form> 
     </div>
     <h2> "10/10 a masterpiece" </h2>
@@ -112,6 +112,8 @@
 
 
 <div class="col-3"></div> 
-
+<script> 
+    $(document).ready();
+</script> 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

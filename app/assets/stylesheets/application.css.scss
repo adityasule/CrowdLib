@@ -277,6 +277,34 @@ p {
         color: #000000; 
     }  
 }
+
+.comment_dialog input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.comment_dialog input[type=text]:focus {
+    width: 80%;
+}
+
+.comment_dialog .comment_submit {
+    border: 0px solid #000;
+    background-color: #ffffff; 
+    color: #808080;
+    display: block;
+    font-size: 20px; 
+    margin: 2rem auto;
+    transition: background-color 0.5s;
+    padding-bottom: 80px;
+    resize: both; 
+    &:hover {
+        color: #000000; 
+    }  
+}
+
+
+
+
 .comment_dialog .comment_message {
     font-size: 30px;
     width: 30%;
@@ -359,7 +387,8 @@ p {
     display: inline; 
 }
 .upvote {
+    padding-left: 40px;
     display: inline;
-    font-size: 80px;
+    font-size: 50px;
 
 }
