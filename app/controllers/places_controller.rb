@@ -16,6 +16,8 @@ class PlacesController < ApplicationController
       when "comfort"
         @places = Place.all.sort  { |a,b| (((a.comfort_max) * 1.0)/a.comfort_num) <=> (((b.comfort_max) * 1.0)/b.comfort_num) }
       end
+    elsif params[:q].present?
+        @places = Place.search(params[:q])
     else
       @places = Place.order(clicks: :desc)
     end

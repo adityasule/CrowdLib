@@ -16,10 +16,10 @@
 </div>
 <div id="taskbar">
     <div class="col-12">
-        <form class="search">
-            <input class="search_message" placeholder="Where do you want to study?" type="text" id="locationsearch">    
-            <input type="submit" class="search_submit" value="search"> 
-        </form> 
+        <%= form_tag("/places", method: :get, :class => "search" ) do %>
+            <%= text_field_tag(:q, "Where do you want to study", :class => "typeahead search_message")%>
+            <%= submit_tag("Search", :class => "search_submit") %>
+        <% end %>
     </div>
 </div>
 

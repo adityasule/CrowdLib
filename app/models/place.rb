@@ -3,4 +3,6 @@ class Place < ActiveRecord::Base
 	def to_param
 		name
 	end
+
+	searchkick autocomplete: ['name']
 end
