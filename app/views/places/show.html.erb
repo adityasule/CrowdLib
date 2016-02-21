@@ -1,3 +1,56 @@
+<div id="title">
+    <h1> <%= @place.name %> </h1> 
+</div>
+<div class="col-1"></div>
+<div class="col-4">
+    <br><br><br>
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Crowd </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Noise </h4> 
+        <input type="range" min="0" max="10">
+    </form> 
+    <form action="data.asp" method="get">
+        <h4 class="actionlist"> Cleanliness </h4> 
+        <input type="range" min="0" max="10">
+    </form>
+    <div class="check_in">
+        <a href="#" class="actions_go"> Check In </a>
+    </div> 
+
+</div> 
+<div class="col-1"></div> 
+<div class="col-6 map">
+   <!-- Set height and width with CSS -->
+            <div id="googleMap" style="height:600px;width:100%;"></div>
+
+            <!-- Add Google Maps -->
+                <script src="http://maps.googleapis.com/maps/api/js"></script>
+                <script>
+                var myCenter = new google.maps.LatLng(<%= @place.locationx %>, <%= @place.locationy %>);
+                function initialize() {
+                    var mapProp = {
+                        center:myCenter,
+                        zoom:16,
+                        scrollwheel:false,
+                        draggable:true,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                        };
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    var marker = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP, 
+                        position:myCenter,
+                    });
+                    marker.setMap(map);
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+        </div>
+
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
