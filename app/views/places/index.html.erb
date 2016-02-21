@@ -1,37 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div id="login">
+    <form class="login">
+        <input class="login_message" placeholder="Username" type="text" id="locationlogin">   
+        <input class="password_message" placeholder="Password" type="text" id="password">   
+        <input type="submit" class="login_submit" value="login"> 
+    </form> 
 
-<h1>Listing Places</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Locationx</th>
-      <th>Locationy</th>
-      <th>Crowd</th>
-      <th>Noise</th>
-      <th>Comfort</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+</div>
 
-  <tbody>
+
+<div id="title">
+    <h1> CrowdLib </h1> 
+</div>
+<div id="taskbar">
+    <div class="col-12">
+        <form class="search">
+            <input class="search_message" placeholder="Where do you want to study?" type="text" id="locationsearch">    
+            <input type="submit" class="search_submit" value="search"> 
+        </form> 
+    </div>
+</div>
+
+<div id="main">
     <% @places.each do |place| %>
-      <tr>
-        <td><%= place.name %></td>
-        <td><%= place.locationx %></td>
-        <td><%= place.locationy %></td>
-        <td><%= place.crowd %></td>
-        <td><%= place.noise %></td>
-        <td><%= place.comfort %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <div class="col-4">
+            <h2> <%= place.name %> </h2>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h4> Crowd </h4>
+                <h4> Noise </h4> 
+                <h4> Clean </h4> 
+            </div>
+            <div class="col-2"> 
+                <meter value="<%= place.crowd %>"></meter>
+                <meter value="<%= place.noise %>"></meter>
+                <meter value="<%= place.comfort %>"></meter> 
+                <div class="find">
+                    <a href="ugl.html" class="actions_go"> Find </a> 
+                </div> 
+            </div>
+        </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+</div>
 
 <%= link_to 'New Place', new_place_path %>
