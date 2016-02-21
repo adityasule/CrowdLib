@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico"/>
-
+<!--
 <div id="login">
     <form class="login">
         <input class="login_message" placeholder="Username" type="text" id="locationlogin">   
@@ -9,7 +9,7 @@
         <input type="submit" class="login_submit" value="login"> 
     </form> 
 </div>
-
+--> 
 
 <div id="title">
     <h1> CrowdLib </h1> 
@@ -17,14 +17,14 @@
 <div id="taskbar">
     <div class="col-12">
         <%= form_tag("/places", method: :get, :class => "search" ) do %>
-            <%= text_field_tag(:q, "Where do you want to study", :class => "typeahead search_message")%>
+            <%= text_field_tag(:q, "", :class => "typeahead search_message")%>
             <%= submit_tag("Search", :class => "search_submit") %>
         <% end %>
     </div>
 </div>
 
 
-<div id="filter">
+<div class="col-12" id="filter">
     <%= form_tag("/places#filter", method: :get) do %>
         <div>
             <%= radio_button_tag(:filter, "popularity") %>
@@ -43,7 +43,7 @@
             <%= label_tag(:filter_comfort, "comfort") %>
         </div>
         <div>
-            <%= submit_tag("Search") %>
+            <%= submit_tag("Filter", :class => "filter_submit") %>
         </div>
     <% end %>
 </div>
@@ -75,4 +75,7 @@
     <% end %>
 </div>
 
-<%= link_to 'New/places Place', new_place_path %>
+<div class="col-12">
+    <br><br><br><br> 
+</div>
+
