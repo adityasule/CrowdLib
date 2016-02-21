@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place.name %>
+</p>
+
+<p>
+  <strong>Locationx:</strong>
+  <%= @place.locationx %>
+</p>
+
+<p>
+  <strong>Locationy:</strong>
+  <%= @place.locationy %>
+</p>
+
+<p>
+  <strong>Clicks:</strong>
+  <%= @place.clicks %>
+</p>
+
+<p>
+  <strong>Crowd max:</strong>
+  <%= @place.crowd_max %>
+</p>
+
+<p>
+  <strong>Crowd current:</strong>
+  <%= @place.crowd_current %>
+</p>
+
+<p>
+  <strong>Noise max:</strong>
+  <%= @place.noise_max %>
+</p>
+
+<p>
+  <strong>Noise num:</strong>
+  <%= @place.noise_num %>
+</p>
+
+<p>
+  <strong>Comfort max:</strong>
+  <%= @place.comfort_max %>
+</p>
+
+<p>
+  <strong>Comfort num:</strong>
+  <%= @place.comfort_num %>
+</p>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

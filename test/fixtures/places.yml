@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  locationx: 1.5
+  locationy: 1.5
+  clicks: 1
+  crowd_max: 1
+  crowd_current: 1
+  noise_max: 1
+  noise_num: 1
+  comfort_max: 1
+  comfort_num: 1
+
+two:
+  name: MyString
+  locationx: 1.5
+  locationy: 1.5
+  clicks: 1
+  crowd_max: 1
+  crowd_current: 1
+  noise_max: 1
+  noise_num: 1
+  comfort_max: 1
+  comfort_num: 1

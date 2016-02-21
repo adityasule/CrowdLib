@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Locationx</th>
+      <th>Locationy</th>
+      <th>Clicks</th>
+      <th>Crowd max</th>
+      <th>Crowd current</th>
+      <th>Noise max</th>
+      <th>Noise num</th>
+      <th>Comfort max</th>
+      <th>Comfort num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% count = 0 %>
+    <% @places.order(clicks: :desc).each do |place| 
+      count += 1%>
+      <tr>
+        <td><%= place.name %></td>
+        <td><%= place.locationx %></td>
+        <td><%= place.locationy %></td>
+        <td><%= place.clicks %></td>
+        <td><%= place.crowd_max %></td>
+        <td><%= place.crowd_current %></td>
+        <td><%= place.noise_max %></td>
+        <td><%= place.noise_num %></td>
+        <td><%= place.comfort_max %></td>
+        <td><%= place.comfort_num %></td>
+        <td><%= link_to 'Show', place %></td>
+        <td><%= link_to 'Edit', edit_place_path(place) %></td>
+        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% break if count == 6 %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place', new_place_path %>
