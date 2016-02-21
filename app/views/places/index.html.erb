@@ -22,7 +22,9 @@
 </div>
 
 <div id="main">
-    <% @places.each do |place| %>
+    <% count = 0 %>
+    <% @places.each do |place| 
+        count += 1%>
         <div class="col-4">
             <h2> <%= place.name %> </h2>
             <div class="col-1"></div>
@@ -40,6 +42,7 @@
                 </div> 
             </div>
         </div>
+        <% break if count == 6 %>
     <% end %>
 </div>
 
