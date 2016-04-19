@@ -36,23 +36,6 @@ When the initial visuals were set up, the team implemented key features onto the
 
 
 
-Challenges we ran into
-========
-
-Lack of sleep
-Question our design philosophy throughout the entire development process
-Successfully understanding and implementing a framework and language we have never used before.
-
-
-Accomplishments that we're proud of
-========
-
-_Successfully understanding and implementing a framework and language we have never used before. _ Prior to the hackathon, our team had no prior experience in Ruby on Rails, and no in-depth skills on HTML and CSS. However, the team still pulled through and managed to make full use of the framework in the creation of CrowdLib.
-What we learned
-A whole new language and framework
-Design philosophy of websites for optimal user experience.
-
-
 What's next for CrowdLib
 ========
 
